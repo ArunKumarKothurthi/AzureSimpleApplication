@@ -14,7 +14,13 @@ public class CheckController {
 	
 	@GetMapping("hello/{name}")
 	public String namingMethod(@PathVariable("name")String name) {
-	
-		return "Hello "+name+" \n Babunava.....";
+		String msg = "";
+	if(name.equalsIgnoreCase("lohit")) {
+		msg = "Pora puski";
+	}
+	else  {
+		msg= "Hello "+name+" \n Babunava.....";
+	}
+		return msg;
 	}
 }
